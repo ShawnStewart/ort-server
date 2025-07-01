@@ -92,7 +92,12 @@ const RepositoryRunsComponent = () => {
               {repo.url}
             </Link>
           </CardTitle>
-          <CardDescription>{repo.description}</CardDescription>
+          <CardDescription className='flex flex-col gap-1'>
+            <div>{repo.description}</div>
+            <div>
+              Repository ID: <span className='font-bold'>{repo.id}</span>
+            </div>
+          </CardDescription>
         </CardHeader>
       </Card>
       <JobDurations
